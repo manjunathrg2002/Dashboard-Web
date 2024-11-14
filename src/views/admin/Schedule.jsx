@@ -4,7 +4,9 @@ import { HiDotsHorizontal } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
-const AdminDashboard = () => {
+const Schedule = () => {
+
+
   const formattedDate = new Date().toLocaleDateString("en-US", {
     weekday: "short", // Day as a 3-character abbreviation (e.g., "Mon")
     month: "short", // Month as a 3-character abbreviation (e.g., "Nov")
@@ -15,101 +17,12 @@ const AdminDashboard = () => {
   return (
     <div className="px-2 md:px-7 py-2">
       <div>
-        <h1 className="text-[24px] font-semibold ml-1">Dashboard</h1>
+        <h1 className="text-[24px] font-semibold ml-1">Schedule</h1>
       </div>
 
       <div className="w-full flex flex-wrap mt-2">
         <div className="w-full lg:w-7/12 lg:pr-3 space-y-6">
-          {/* Grid for the first three smaller cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Card 1 - Available Position */}
-            <div className="flex justify-between items-center p-5 bg-[#fae8e8] rounded-md gap-3 h-[130px] mx-auto w-full">
-              <div className="flex flex-col justify-start items-start text-[#5c5a5a]">
-                <span className="text-md font-medium text-[18px]">
-                  Available Position
-                </span>
-                <h2 className="text-3xl font-bold">24</h2>
-                <span className="text-md font-medium text-[#FF5151]">
-                  4 Urgently needed
-                </span>
-              </div>
-            </div>
 
-            {/* Card 2 - Job Open */}
-            <div className="flex justify-between items-center p-5 bg-[#e9feea] rounded-md gap-3 h-[130px] mx-auto w-full">
-              <div className="flex flex-col justify-start items-start text-[#5c5a5a]">
-                <span className="text-md font-medium text-[18px]">
-                  Job Open
-                </span>
-                <h2 className="text-3xl font-bold">10</h2>
-                <span className="text-md font-medium text-[#3786F1]">
-                  4 Active hiring
-                </span>
-              </div>
-            </div>
-
-            {/* Card 3 - New Employees */}
-            <div className="flex justify-between items-center p-5 bg-[#fde2ff] rounded-md gap- h-[130px] mx-auto w-full">
-              <div className="flex flex-col justify-start items-start text-[#5c5a5a]">
-                <span className="text-md font-medium text-[18px]">
-                  New Employees
-                </span>
-                <h2 className="text-3xl font-bold">24</h2>
-                <span className="text-md font-medium text-[#EE61FC]">
-                  4 Department
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Grid for the last two larger cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Card 4 - Total Employees */}
-            <div className="flex justify-between items-center border border-gray-300 px-3 rounded-md gap-2 h-[190px] mx-auto w-full">
-              <div className="flex flex-col justify-start items-start text-[#5c5a5a]">
-                <span className="text-md font-medium text-[19px] mb-3">
-                  Total Employees
-                </span>
-                <h2 className="text-3xl font-bold text-[40px] mb-6">216</h2>
-                <span className="text-md font-medium text-[12px] mb-1">
-                  120 Men
-                </span>
-                <span className="text-md font-medium text-[12px]">
-                  64 Women
-                </span>
-              </div>
-              <div>
-                <img
-                  className="w-[104px] h-[120px]"
-                  src="/images/Frame1.jpg"
-                  alt="Total Employees"
-                />
-              </div>
-            </div>
-
-            {/* Card 5 - Talent Request */}
-            <div className="flex justify-between items-center border border-gray-300 px-3 rounded-md gap-2 h-[190px] mx-auto w-full">
-              <div className="flex flex-col justify-start items-start text-[#5c5a5a]">
-                <span className="text-md font-medium text-[19px] mb-3">
-                  Talent Request
-                </span>
-                <h2 className="text-3xl font-bold text-[40px] mb-6">16</h2>
-                <span className="text-md font-medium text-[12px] mb-1">
-                  6 Men
-                </span>
-                <span className="text-md font-medium text-[12px]">
-                  10 Women
-                </span>
-              </div>
-              <div>
-                <img
-                  className="w-[104px] h-[120px]"
-                  src="/images/Frame2.jpg"
-                  alt="Talent Request"
-                />
-              </div>
-            </div>
-          </div>
 
           {/* Announcement Section */}
           <div className="w-full p-4 rounded-md text-[#d0d2d6] border border-[#FAFAFA]-300">
@@ -117,7 +30,10 @@ const AdminDashboard = () => {
               <h2 className="font-semibold text-lg text-[#303030]">
                 Announcement
               </h2>
-              <time className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center">
+              <time
+                className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center"
+                
+              >
                 {formattedDate}
                 <FaChevronDown className="text-[#B2B2B2] ml-2" />
               </time>
@@ -182,41 +98,16 @@ const AdminDashboard = () => {
           </div>
         </div>
         <div className="w-full lg:w-5/12 lg:pl-4 mt-6 lg:mt-0">
-          <div className="w-full bg-[#161E54] p-4 rounded-md text-[#d0d2d6]">
-            <div className="w-full flex justify-between bg-[#1B204A] items-center">
-              <h2 className="font-semibold text-lg  text-[#FFFFFF] p-2 pb-3">
-                Recently Activity
-              </h2>
-            </div>
-
-            <div className="flex flex-col justify-start items-start text-[#FFFFFF]">
-              <div className="text-[10px] text-[#d0d2d6] px-2">
-                10.40 AM, Fri 10 Sept 2021
-              </div>
-              <span className="text-md font-medium text-[18px] p-2">
-                You Posted a New Job
-              </span>
-
-              <span className="text-md  text-[14px] p-2 text-[#d0d2d6] ">
-                Kindly check the requirements and terms of work and make sure
-                everything is right.
-              </span>
-            </div>
-            <div className="flex justify-between items-center text-white p-2">
-              <div>Today you made 12 Activities</div>
-              <div>
-                <button className="bg-[#FF5151] text-white px-4 py-2 rounded">
-                  See All Activity
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="w-full p-4 rounded-md text-[#d0d2d6] border border-gray-300 mt-6">
+         
+          <div className="w-full p-4 rounded-md text-[#d0d2d6] border border-gray-300 ">
             <div className="flex justify-between items-center">
               <h2 className="font-semibold text-lg text-[#303030]">
                 Upcoming Schedule
               </h2>
-              <time className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center">
+              <time
+                className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center"
+                
+              >
                 {formattedDate}
                 <FaChevronDown className="text-[#B2B2B2] ml-2" />
               </time>
@@ -286,4 +177,4 @@ const AdminDashboard = () => {
     </div>
   );
 };
-export default AdminDashboard;
+export default Schedule;

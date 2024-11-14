@@ -28,9 +28,9 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
         className={`w-[250px] fixed bg-[#f9f7f7] z-50 top-0 h-screen shadow-[0_0_15px_0_rgb(34_41_47_/_5%)] transition-all ${showSidebar ? "left-0" : "-left-[260px] lg:left-0"}`}
       >
         <div className="h-[70px]  mt-[10px] mb-[20px] flex justify-center items-center">
-          <Link to="/" className="w-[140px]">
-            <img className="w-full h-full" src="http://localhost:3000/images/VasitumLogo.png" alt="Logo" />
-          </Link>
+        <Link to="/admin/dashboard" className="w-[140px]">
+    <img className="w-full h-full" src="/images/VasitumLogo.png" alt="Logo" />
+</Link>
         </div>
         <div className="px-[30px] mb-[20px] text-[#686868]  ">
           <div className="text-[12px]">MAIN MENU</div>
@@ -40,19 +40,19 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
             <MdDashboard />
             <span>Dashboard</span>
           </Link>
-          <Link to="/admin/dashboard/orders" className={getNavLinkClass("/admin/dashboard/orders")}>
+          <Link to="/admin/dashboard/recruitment" className={getNavLinkClass("/admin/dashboard/recruitment")}>
             <FaUserTimes />
             <span>Recruitment</span>
           </Link>
-          <Link to="/admin/dashboard/category" className={getNavLinkClass("/admin/dashboard/category")}>
+          <Link to="/admin/dashboard/schedule" className={getNavLinkClass("/admin/dashboard/schedule")}>
             <FaCalendarDay />
             <span>Schedule</span>
           </Link>
-          <Link to="/admin/dashboard/sellers" className={getNavLinkClass("/admin/dashboard/sellers")}>
+          <Link to="/admin/dashboard/employee" className={getNavLinkClass("/admin/dashboard/employee")}>
             <FaUsers />
             <span>Employee</span>
           </Link>
-          <Link to="/admin/dashboard/payment-request" className={getNavLinkClass("/admin/dashboard/payment-request")}>
+          <Link to="/admin/dashboard/department" className={getNavLinkClass("/admin/dashboard/department")}>
             <MdOutlineSupport />
             <span>Department</span>
           </Link>
@@ -60,11 +60,11 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
 
         <div className="px-[30px] text-[#686868]">
           <div className="text-[12px]" >OTHER</div>   
-          <Link to="/admin/dashboard/deactive-sellers" className={getNavLinkClass("/admin/dashboard/deactive-sellers")}>
+          <Link to="/admin/dashboard/support" className={getNavLinkClass("/admin/dashboard/support")}>
             <BiSupport />
             <span>Support</span>
           </Link>
-          <Link to="/admin/dashboard/sellers-request" className={getNavLinkClass("/admin/dashboard/sellers-request")}>
+          <Link to="/admin/dashboard/settings" className={getNavLinkClass("/admin/dashboard/settings")}>
             <IoSettingsSharp />
             <span>Settings</span>
           </Link>

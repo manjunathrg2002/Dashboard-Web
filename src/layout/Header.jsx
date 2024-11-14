@@ -50,7 +50,7 @@ const Header = ({ showSidebar, setShowSidebar }) => {
             <div className="flex justify-center items-center gap-3">
               <img
                 className="w-[45px] h-[45px] rounded-full overflow-hidden"
-                src="http://localhost:3000/images/MaskGroup.jpg"
+                src="/images/MaskGroup.jpg"
                 alt=""
               />
 

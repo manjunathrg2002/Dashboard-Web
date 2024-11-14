@@ -4,7 +4,9 @@ import { HiDotsHorizontal } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
-const AdminDashboard = () => {
+const Employee = () => {
+
+
   const formattedDate = new Date().toLocaleDateString("en-US", {
     weekday: "short", // Day as a 3-character abbreviation (e.g., "Mon")
     month: "short", // Month as a 3-character abbreviation (e.g., "Nov")
@@ -15,7 +17,7 @@ const AdminDashboard = () => {
   return (
     <div className="px-2 md:px-7 py-2">
       <div>
-        <h1 className="text-[24px] font-semibold ml-1">Dashboard</h1>
+        <h1 className="text-[24px] font-semibold ml-1">Employee</h1>
       </div>
 
       <div className="w-full flex flex-wrap mt-2">
@@ -117,7 +119,10 @@ const AdminDashboard = () => {
               <h2 className="font-semibold text-lg text-[#303030]">
                 Announcement
               </h2>
-              <time className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center">
+              <time
+                className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center"
+               
+              >
                 {formattedDate}
                 <FaChevronDown className="text-[#B2B2B2] ml-2" />
               </time>
@@ -187,6 +192,7 @@ const AdminDashboard = () => {
               <h2 className="font-semibold text-lg  text-[#FFFFFF] p-2 pb-3">
                 Recently Activity
               </h2>
+              
             </div>
 
             <div className="flex flex-col justify-start items-start text-[#FFFFFF]">
@@ -216,7 +222,10 @@ const AdminDashboard = () => {
               <h2 className="font-semibold text-lg text-[#303030]">
                 Upcoming Schedule
               </h2>
-              <time className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center">
+              <time
+                className="font-semibold text-nowrap text-[#303030] cursor-pointer border p-1 rounded-lg flex items-center"
+                
+              >
                 {formattedDate}
                 <FaChevronDown className="text-[#B2B2B2] ml-2" />
               </time>
@@ -286,4 +295,4 @@ const AdminDashboard = () => {
     </div>
   );
 };
-export default AdminDashboard;
+export default Employee;
